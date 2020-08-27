@@ -30,7 +30,7 @@ SunWuKong112
         each with specific instructions. Follow the instructions when answering the questions to format the README file
         correctly. It is suggested that you proofread the resulting README file to ensure that it is formatted correctly.
 
-        ![demonstration gif](http://github.com/SunWuKong112/README-Generator/blob/master/Develop/utils/imageFiles/usageDemonstration.gif)
+![demonstration gif](http://github.com/SunWuKong112/README-Generator/blob/master/Develop/utils/imageFiles/usageDemonstration.gif)
 
 ## #Licenses:
         * N/a
