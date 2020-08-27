@@ -1,6 +1,22 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  let installations = data.installations;
+  let instArray = installations.split(" ");
+  installations = "";
+  for (let i in instArray)
+  {
+    installations += `
+    * ${instArray[i]}`;
+  }
+  let license = data.licenses;
+  let licenseArray = license.split(" ");
+  licenses = "";
+  for (let i in instArray)
+  {
+    licenses += `
+    * ${licenseArray[i]}`;
+  }
+return `# ${data.title}
 
 ## GitHub Username:
 ${data.username}
@@ -10,21 +26,19 @@ ${data.username}
 ${data.description}
 
 ## Table of Contents:
-* [Installation](##installation)
-* [Installation](#usage)
-* [License](#licenses)
-* [Contributing](#contributing)
-* [Tests](#tests)
-* [Questions](#questions)
+  * [Installation](##installation)
+  * [Installation](#usage)
+  * [License](#licenses)
+  * [Contributing](#contributing)
+  * [Tests](#tests)
+  * [Questions](#questions)
 
-## #Installation:
-${data.installations}
+## #Installation:${installations}
 
 ## #Usage:
 ${data.usage}
 
-## #License:
-${data.licenses}
+## #License:${licenses}
 
 ## #Contributing:
 ${data.contributing}

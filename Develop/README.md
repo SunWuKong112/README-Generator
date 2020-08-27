@@ -16,10 +16,11 @@ This application will generate a README file based on your answers to a series o
 * [Questions](#questions)
 
 ## #Installation:
-inquire, fs
+* inquire 
+* fs
 
 ## #Usage:
-I didn't think I would get this far (I'm going to edit this README later)
+
 ![alt-text](./imageFiles/usageDemonstration.gif)
 
 ## #License:
