@@ -1,21 +1,12 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
-  let installations = data.installations;
-  let instArray = installations.split(" ");
-  installations = "";
-  for (let i in instArray)
-  {
-    installations += `
-    * ${instArray[i]}`;
-  }
-  let license = data.licenses;
-  let licenseArray = license.split(" ");
-  licenses = "";
-  for (let i in instArray)
-  {
-    licenses += `
-    * ${licenseArray[i]}`;
-  }
+  let description = generateSection(data.description, "~", "paragraph");
+  let installations = generateSection(data.installations, ",", "bullet");
+  let usage = generateSection(data.usage, "~", "paragraph");
+  let licenses = generateSection(data.licenses, ",", "bullet");
+  let contributing = generateSection(data.contributing, ",", "paragraph");
+  let tests = generateSection(data.tests, ",", "paragraph");
+  let questions = generateSection(data.questions, ",", "paragraph");
 return `# ${data.title}
 
 ## GitHub Username:
@@ -23,33 +14,56 @@ ${data.username}
 [GitHub](${data.GitHubLink})
 
 ##  Description:
-${data.description}
+${description}
 
 ## Table of Contents:
   * [Installation](##installation)
   * [Installation](#usage)
-  * [License](#licenses)
+  * [Licenses](#licenses)
   * [Contributing](#contributing)
   * [Tests](#tests)
   * [Questions](#questions)
 
 ## #Installation:${installations}
 
-## #Usage:
-${data.usage}
+## #Usage:${usage}
 
-## #License:${licenses}
+## #Licenses:${licenses}
 
 ## #Contributing:
-${data.contributing}
+${contributing}
 
 ## #Tests:
-${data.tests}
+${tests}
 
 ## #Questions:
-${data.questions}
+${questions}
 
 `;
+}
+
+function generateSection(str, seperator, type)
+{
+  let strArray = str.split(seperator);
+  switch (type){
+    case "paragraph":
+      str = "";
+      for (let i in strArray)
+      {
+        str += `
+        ${strArray[i]}`;
+      }
+      return str;
+    case "bullet":
+        str = "";
+        for (let i in strArray)
+        {
+        str += `
+        * ${strArray[i]}`;
+        }
+        return str;
+    default: return str
+  }
 }
 
 module.exports = generateMarkdown;

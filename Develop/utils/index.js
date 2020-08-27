@@ -15,16 +15,16 @@ const questions = [ { type: "input",
                       message:"Enter GitHub link:"},
                     { typs: "input",
                       name: "description",
-                      message: "Enter README description:"},
+                      message: "Enter README description; use a tilde to make a new line (in the top-left corner of the keyboard, looks like this ~; hold shift and press it):"},
                     { type: "input",
                       name: "installations",
-                      message: "Enter required installations (spaces in between each entry):"},
+                      message: "Enter required installations; commas in between each entry:"},
                     { type: "input",
                       name: "usage",
                       message: "Enter usage:"},
                     { type: "input",
                       name: "licenses",
-                      message: "Enter licenses (spaces in between each entry:"},
+                      message: "Enter licenses; commas in between each entry:"},
                     { type: "input",
                       name: "contributing",
                       message: "Enter contributing:"},
@@ -36,7 +36,7 @@ const questions = [ { type: "input",
                       message: "Enter Questions:"},
                     { type: "input",
                       name: "fileName",
-                      message: "Enter file name:"}];
+                      message: "Enter file name (it is highly suggested that this be named README):"}];
 
 // function to write README file
 
