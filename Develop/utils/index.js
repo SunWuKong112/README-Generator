@@ -21,22 +21,22 @@ const questions = [ { type: "input",
                       message: "Enter required installations; commas in between each entry:"},
                     { type: "input",
                       name: "usage",
-                      message: "Enter usage:"},
+                      message: "Enter usage; use a tilde to make a new line (in the top-left corner of the keyboard, looks like this ~; hold shift and press it):"},
                     { type: "input",
                       name: "licenses",
                       message: "Enter licenses; commas in between each entry:"},
                     { type: "input",
                       name: "contributing",
-                      message: "Enter contributing:"},
+                      message: "Enter contributing; use a tilde to make a new line (in the top-left corner of the keyboard, looks like this ~; hold shift and press it):"},
                     { type:"input",
                       name: "tests",
-                      message: "Enter tests:"},
+                      message: "Enter tests; use a tilde to make a new line (in the top-left corner of the keyboard, looks like this ~; hold shift and press it):"},
                     { type: "input",
                       name: "questions",
-                      message: "Enter Questions:"},
+                      message: "Enter Questions; use a tilde to make a new line (in the top-left corner of the keyboard, looks like this ~; hold shift and press it):"},
                     { type: "input",
                       name: "fileName",
-                      message: "Enter file name (it is highly suggested that this be named README):"}];
+                      message: "Enter file name (it is highly suggested that the file be named README):"}];
 
 // function to write README file
 

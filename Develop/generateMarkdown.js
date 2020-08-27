@@ -1,12 +1,12 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
-  let description = generateSection(data.description, "~", "paragraph");
-  let installations = generateSection(data.installations, ",", "bullet");
-  let usage = generateSection(data.usage, "~", "paragraph");
-  let licenses = generateSection(data.licenses, ",", "bullet");
-  let contributing = generateSection(data.contributing, ",", "paragraph");
-  let tests = generateSection(data.tests, ",", "paragraph");
-  let questions = generateSection(data.questions, ",", "paragraph");
+  let description = generateSection(data.description, "paragraph");
+  let installations = generateSection(data.installations, "bullet");
+  let usage = generateSection(data.usage, "paragraph");
+  let licenses = generateSection(data.licenses, "bullet");
+  let contributing = generateSection(data.contributing, "paragraph");
+  let tests = generateSection(data.tests, "paragraph");
+  let questions = generateSection(data.questions, "paragraph");
 return `# ${data.title}
 
 ## GitHub Username:
@@ -42,11 +42,11 @@ ${questions}
 `;
 }
 
-function generateSection(str, seperator, type)
+function generateSection(str, type)
 {
-  let strArray = str.split(seperator);
   switch (type){
     case "paragraph":
+      let strArray = str.split("~");
       str = "";
       for (let i in strArray)
       {
@@ -55,6 +55,7 @@ function generateSection(str, seperator, type)
       }
       return str;
     case "bullet":
+      let strArray = str.split(",");
         str = "";
         for (let i in strArray)
         {
