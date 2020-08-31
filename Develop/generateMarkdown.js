@@ -44,27 +44,25 @@ ${questions}
 
 function generateSection(str, type)
 {
+  
   switch (type){
     case "paragraph":
-      let strArray = str.split("~");
-      str = "";
-      for (let i in strArray)
-      {
-        str += `
-        ${strArray[i]}`;
-      }
-      return str;
-    case "bullet":
-      let strArray = str.split(",");
-        str = "";
-        for (let i in strArray)
-        {
-        str += `
-        * ${strArray[i]}`;
-        }
-        return str;
-    default: return str
+      return splitString(str, type);
+      case "bullet":
+      return splitString(str, type);
+      default: console.log("Error");
   }
 }
-
-module.exports = generateMarkdown;
+function splitString(str, type)
+{
+  let strArray = str.split("type");
+  str = "";
+  for (let i in strArray)
+  {
+    str += `
+    ${strArray[i]}`;
+  }
+  return str;
+}
+    module.exports = generateMarkdown;
+    
